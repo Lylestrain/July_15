@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Document</title>
+    <link rel="stylesheet" href="../main_styles.css">
+
+    <style> 
+
+.control-me {
+    /* Default state */
+    height: 4rem;
+    width: 4rem;
+    background-color: rgb(122, 107, 189);
+  }
+  #toggle:checked ~ .control-me {
+    /* A toggled state! No JavaScript! */
+    height: 0rem;
+    overflow: hidden;
+  }
+
+  section>div {
+      position: relative;
+      background-color: darksalmon;
+  }
+
+
+    </style>
+
+</head>
+<body>
+  <h1>Check Box Hack</h1>
+  <h2>Intro</h2>
+  <p>  The “Checkbox Hack” is where you use a connected &lt;label&gt; and &lt;input type="checkbox"&gt; and usually some other element you are trying to control, like this:
+  </p>
+
+<section>
+    <div>
+        <label for="toggle">Do Something</label>
+        <input type="checkbox" id="toggle">
+        <div class="control-me">Control me</div>
+    </div>
+</section>
+
+<p>Then with CSS, you hide the checkbox entirely. Probably by kicking it off the page with absolute positioning or setting its opacity to zero. But just because the checkbox is hidden, clicking the &lt;label&gt; still toggles its value on and off. Then you can use the adjacent sibling combinator to style the &lt;div&gt; differently based on the :checked state of the input.
+</p>
+
+<div class="btr_rtrn"><a href="CheckBoxHack_index.html">back</a></div>
+
+
+
+</body>
+</html>
